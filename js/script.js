@@ -37,14 +37,9 @@ function showList(array) {
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
-  document.addEventListener("DOMContentLoaded", (e) => {
-    const stringElements = strangeArray.filter((element) => typeof element === "string");
-  
-    
-    stringElements.sort();
-  
-   
-    showList(stringElements);
-  });
-  
+  // Filtrar elementos de tipo String y ordenar alfabéticamente
+  const filteredStrings = strangeArray.filter((element) => typeof element === "string");
+  filteredStrings.sort((a, b) => a.localeCompare(b));
+  showList(filteredStrings);
 });
+
